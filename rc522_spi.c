@@ -51,7 +51,7 @@ unsigned char ReadRawRC(unsigned char Address)
      for (i=8; i>0; i--) {
          SCK522_1;
          ucResult <<= 1;
-         ucResult |= SO522;
+         ucResult |= SO522_PIN;
          SCK522_0;
      }
 
