@@ -11,7 +11,9 @@ void Init_rc522(void)
 {
      PcdReset();
      PcdAntennaOff(); 
-     PcdAntennaOn();  
+     delay_us(1000);
+     PcdAntennaOn(); 
+     
 }
 /////////////////////////////////////////////////////////////////////
 //功  能：寻卡
@@ -549,11 +551,11 @@ char PcdComMF522(unsigned char Command,
    return status;
 }
 
-
 /////////////////////////////////////////////////////////////////////
 //开启天线  
 //每次启动或关闭天险发射之间应至少有1ms的间隔
 /////////////////////////////////////////////////////////////////////
+
 void PcdAntennaOn()
 {
   unsigned char i;
